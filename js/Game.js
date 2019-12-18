@@ -14,7 +14,6 @@ function reset() {
         hearts[i].src = 'images/liveHeart.png';
     };
     for (let i = 0; i < WrongButtons.length; i++) { // Loop to reset wrong buttons
-        WrongButtons[i].disabled = false;
         WrongButtons[i].className = 'key';
     };
     for (let i = 0; i < RightButtons.length; i++) { // Loop to reset chosen buttons
@@ -53,7 +52,7 @@ getRandomPhrase() {
     }
 
 handleInteraction(button) {
-button.disabled = true;
+button.className = "disabled";
 if (game.activePhrase.checkLetter(button.innerHTML) === true) { // If the button selected is the same as letter in phrase    
     game.activePhrase.showMatchedLetter(button.innerHTML);
     this.checkForWin(); // Checks if letter is correctly guessed 
