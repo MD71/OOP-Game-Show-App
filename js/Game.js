@@ -14,6 +14,7 @@ function reset() {
         hearts[i].src = 'images/liveHeart.png';
     };
     for (let i = 0; i < WrongButtons.length; i++) { // Loop to reset wrong buttons
+        WrongButtons[i].disabled = false;
         WrongButtons[i].className = 'key';
     };
     for (let i = 0; i < RightButtons.length; i++) { // Loop to reset chosen buttons
